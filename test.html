@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>WPC Stream</title>
+</head>
+<p id="Android" style="display:none">
+	<strong>Android Devices</strong>
+	<br>Later versions of Android can use the following URL:&nbsp;<a href="http://ic2.christiannetcast.com/westpca">http://ic2.christiannetcast.com/westpca&nbsp;</a>
+	<br>Please press "Play" if the player is paused. Stream should start within 20 seconds.</p>
+<p id="NotAndroid" style="display:none">
+	<strong>For PC Users</strong>
+	<br>Clicking the link above should ask you to download an m3u file. After you do so, double click the file and the stream should open and begin playing immediately. You don't need to download a new file each time you tune in; simply open up the same file you downloaded the first time.
+	<br><em>Note: If the stream opens in Windows Media Player and you don't hear anything, try clicking on the play/pause bar as circled in red here.</em>
+	<br><strong>Can't Use Windows Media Player?</strong>
+	<br>VideoLAN VLC is probably the best option for users of computers (Windows XP SP2 or later, and many other operating systems) that cannot use Windows Media Player. Download it here:<a href="http://www.videolan.org/vlc/">http://www.videolan.org/vlc/</a>.
+	<br><strong>For MAC Users</strong>
+	<br>The stream should begin automatically when you click the link.
+</p>
+<script>
+	var a = document.getElementById("Android");
+	var na = document.getElementById("NotAndroid");
+	if (navigator.userAgent.match(/Android/i)) {
+		a.style.display = "block";
+		window.location.replace("http://ic2.christiannetcast.com/westpca");
+	}	else {
+		na.style.display = "block";
+		window.location.replace("http://ic2.christiannetcast.com/westpca.m3u");
+	}
+</script>
+</html>
